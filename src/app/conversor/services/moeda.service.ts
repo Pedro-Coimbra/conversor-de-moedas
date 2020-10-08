@@ -42,17 +42,17 @@ export class MoedaService {
     { "sigla": "SGD", "descricao": "Dólar de Singapura" },
     { "sigla": "THB", "descricao": "Baht Tailândia" },
     { "sigla": "TRY", "descricao": "Lira turca" },
-    { "sigla": "USD", "descricao": "Dólar dos Estados Unidos" }, 
+    { "sigla": "USD", "descricao": "Dólar dos Estados Unidos" },
     { "sigla": "ZAR", "descricao": "Rand África do Sul" }
   ];
-  
+
   listarTodas(): Moeda[] {
     if (this.moedas) {
       return this.moedas;
     }
 
     this.moedas = [];
-    for (let moedasObj of this.moedas) {
+    for (let moedasObj of this.moedasObj) {
       let moeda: Moeda = new Moeda();
       Object.assign(moeda, moedasObj);
       this.moedas.push(moeda);
